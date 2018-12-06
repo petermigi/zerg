@@ -1,0 +1,6 @@
+[ 2018-12-05T16:56:18+08:00 ] 127.0.0.1 127.0.0.1 GET /banner/1
+[ log ] lh.zerg.com/banner/1 [运行时间：0.914039s][吞吐率：1.09req/s] [内存消耗：1,387.26kb] [文件加载：33]
+[ error ] [0]我是内部错误[F:\weblx\www\tp5project\zerg\application\api\controller\v1\Banner.php:29]
+[ error ] 我是内部错误
+
+---------------------------------------------------------------

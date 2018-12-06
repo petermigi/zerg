@@ -3,6 +3,7 @@ namespace app\api\validate;
 use think\Validate;
 use think\Request;
 use think\Exception;
+use app\lib\exception\ParameterException;
 
 class BaseValidate extends Validate
 {
@@ -13,12 +14,16 @@ class BaseValidate extends Validate
 
         $params = $request->param();
 
-        $result = $this->check($params);
+        $result = $this->batch() ->check($params);
 
         if(!$result)
         {
-            $error = $this->error;
-            throw new Exception($error);
+            //验证层参数错误 需要一个json结构体,并有具体的异常错误信息
+            //要抛出一个自定义的异常错误类对象继承于BaseException类
+            $e = new ParameterException([
+                'msg' => $this->error                
+            ]);            
+            throw $e;                             
         }
         else 
         {
