@@ -13,7 +13,7 @@ class ExceptionHandler extends Handle
     private $msg;
     private $errorCode;    
 
-    public function render(Exception $e)
+    public function render(\Exception $e)
     {            
           
         if($e instanceof BaseException)
@@ -58,7 +58,7 @@ class ExceptionHandler extends Handle
         return json($result, $this->code);
     }
 
-    private function recordErrorLog(Exception $e)
+    private function recordErrorLog(\Exception $e)
     {
         //手动初始化日志配置(因为关闭了自动记录日志)
         Log::init([

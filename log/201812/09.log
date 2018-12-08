@@ -1,0 +1,7 @@
+[ 2018-12-09T00:34:13+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/banner/1
+[ log ] lh.zerg.com/api/v1/banner/1 [运行时间：0.687040s][吞吐率：1.46req/s] [内存消耗：2,169.66kb] [文件加载：37]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036002s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  (  `banner_id` = 1 ) [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
