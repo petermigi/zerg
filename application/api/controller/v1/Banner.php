@@ -7,7 +7,7 @@ use think\Exception;
 use app\lib\exception\BannerMissException;
 
 class Banner
-{
+{    
     /**
         * 功能说明: 获取指定id的banner信息
         * 参数说明:
@@ -19,17 +19,15 @@ class Banner
     public function getBanner($id)
     {
         (new IDMustBePositiveInt())->goCheck();
-
         
         $banner = BannerModel::getBannerByID($id);  
         
         if(!$banner)
         {
-            throw new BannerMissException();
-            
-        }
+            throw new BannerMissException();            
+        }    
         
-        return json($banner);
+        return $banner;
 
     }
 
