@@ -1,0 +1,36 @@
+[ 2018-12-14T01:29:32+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] lh.zerg.com/api/v1/token/user [运行时间：9.517545s][吞吐率：0.11req/s] [内存消耗：2,634.59kb] [文件加载：48]
+[ sql ] [ DB ] CONNECT:[ UseTime:1.963112s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:1.317075s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'oI3Tr4pUg48OXfrvDp3x-VmZEGz0' LIMIT 1 [ RunTime:0.068004s ]
+[ sql ] [ SQL ] INSERT INTO `user` (`openid`) VALUES ('oI3Tr4pUg48OXfrvDp3x-VmZEGz0') [ RunTime:0.066004s ]
+
+---------------------------------------------------------------
+[ 2018-12-14T01:35:39+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] lh.zerg.com/api/v1/token/user [运行时间：1.441083s][吞吐率：0.69req/s] [内存消耗：2,637.18kb] [文件加载：48]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'oI3Tr4pUg48OXfrvDp3x-VmZEGz0' LIMIT 1 [ RunTime:0.040002s ]
+
+---------------------------------------------------------------
+[ 2018-12-14T01:48:10+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] lh.zerg.com/api/v1/token/user [运行时间：2.612149s][吞吐率：0.38req/s] [内存消耗：2,637.18kb] [文件加载：48]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.074005s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'oI3Tr4pUg48OXfrvDp3x-VmZEGz0' LIMIT 1 [ RunTime:0.051003s ]
+
+---------------------------------------------------------------
+[ 2018-12-14T01:54:19+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] lh.zerg.com/api/v1/token/user [运行时间：360.986647s][吞吐率：0.00req/s] [内存消耗：2,639.08kb] [文件加载：48]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'oI3Tr4pUg48OXfrvDp3x-VmZEGz0' LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2018-12-14T01:58:28+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] lh.zerg.com/api/v1/token/user [运行时间：1.005058s][吞吐率：0.99req/s] [内存消耗：2,637.22kb] [文件加载：48]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.035002s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'oI3Tr4pUg48OXfrvDp3x-VmZEGz0' LIMIT 1 [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
