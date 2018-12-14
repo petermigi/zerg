@@ -18,7 +18,7 @@ class Theme extends BaseModel
         return $this->belongsTo('Image','head_img_id','id');
     }
 
-    //定义关联模型方法 Theme模型和Image模型关联关系: 一对一 theme为从表 image为主表
+    //定义关联模型方法 Theme模型和Product模型关联关系: 多对多 theme为从表 image为主表
     public function products()
     {
         return $this->belongsToMany('Product','theme_product','product_id','theme_id');

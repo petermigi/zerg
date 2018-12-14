@@ -19,10 +19,22 @@ Route::get('api/:version/theme/','api/:version.Theme/getSimpleList');
 //获取专题详情页信息接口访问url路由
 Route::get('api/:version/theme/:id','api/:version.Theme/getComplexOne');
 
-//获取获取商品信息接口访问url路由
-Route::get('api/:version/product/recent','api/:version.Product/getRecent');
+
 //获取获取分类商品信息接口访问url路由
 Route::get('api/:version/product/by_category','api/:version.Product/getAllInCategory');
+//获取获取商品详情信息接口访问url路由
+Route::get('api/:version/product/:id','api/:version.Product/getOne',[],['id'=>'\d+']);
+//获取获取商品信息接口访问url路由
+Route::get('api/:version/product/recent','api/:version.Product/getRecent');
+
+/* Route::group('api/:version/product', function(){
+    //获取获取分类商品信息接口访问url路由
+    Route::get('/by_category','api/:version.Product/getAllInCategory');
+    //获取获取商品详情信息接口访问url路由
+    Route::get('/:id','api/:version.Product/getOne',[],['id'=>'\d+']);
+    //获取获取商品信息接口访问url路由
+    Route::get('/recent','api/:version.Product/getRecent');
+}); */
 
 //获取获取分类信息接口访问url路由
 Route::get('api/:version/category/all','api/:version.Category/getAllCategories');
