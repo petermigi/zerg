@@ -1,0 +1,131 @@
+[ 2018-12-15T17:16:49+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] lh.zerg.com/api/v1/token/user [运行时间：5.248300s][吞吐率：0.19req/s] [内存消耗：2,650.16kb] [文件加载：48]
+[ sql ] [ DB ] CONNECT:[ UseTime:1.741099s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.899052s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'oI3Tr4pUg48OXfrvDp3x-VmZEGz0' LIMIT 1 [ RunTime:0.067004s ]
+
+---------------------------------------------------------------
+[ 2018-12-15T17:30:07+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：1.226071s][吞吐率：0.82req/s] [内存消耗：2,758.31kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.069004s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.024001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.178010s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `user_address` (`name` , `mobile` , `province` , `city` , `country` , `detail` , `user_id`) VALUES ('qiyue' , '18888888888' , '艾泽拉斯' , '暴风城' , '闪金镇' , '狮王之傲旅店' , 1) [ RunTime:0.163009s ]
+
+---------------------------------------------------------------
+[ 2018-12-15T17:32:52+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：0.716041s][吞吐率：1.40req/s] [内存消耗：2,759.66kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.032002s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.035002s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2018-12-15T17:34:39+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：0.696040s][吞吐率：1.44req/s] [内存消耗：2,760.02kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2018-12-15T17:35:40+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：0.851049s][吞吐率：1.18req/s] [内存消耗：2,755.05kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.037003s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.037002s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `user_address`  SET `mobile`='18888888889'  WHERE  `id` = 1 [ RunTime:0.128008s ]
+
+---------------------------------------------------------------
+[ 2018-12-15T17:37:53+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：0.857049s][吞吐率：1.17req/s] [内存消耗：2,755.05kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.049003s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.035002s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `user_address`  SET `mobile`='18888888888'  WHERE  `id` = 1 [ RunTime:0.154009s ]
+
+---------------------------------------------------------------
+[ 2018-12-15T17:43:54+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：0.763043s][吞吐率：1.31req/s] [内存消耗：2,758.64kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.035002s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `user_address` (`name` , `mobile` , `province` , `city` , `country` , `detail` , `user_id`) VALUES ('qiyue' , '13345678911' , '艾泽拉斯' , '暴风城' , '闪金镇' , '狮王之傲旅店' , 1) [ RunTime:0.045003s ]
+
+---------------------------------------------------------------
+[ 2018-12-15T17:52:37+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：253.768515s][吞吐率：0.00req/s] [内存消耗：2,760.35kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031002s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.038002s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `user_address` (`name` , `mobile` , `province` , `city` , `country` , `detail` , `user_id`) VALUES ('qiyue' , '13345678911' , '艾泽拉斯' , '暴风城' , '闪金镇' , '狮王之傲旅店' , 1) [ RunTime:0.050003s ]
+
+---------------------------------------------------------------
+[ 2018-12-15T17:58:02+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：0.714041s][吞吐率：1.40req/s] [内存消耗：2,760.02kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.036002s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2018-12-15T17:58:04+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：0.656038s][吞吐率：1.52req/s] [内存消耗：2,760.02kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.032002s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.033001s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2018-12-15T17:58:07+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：0.659038s][吞吐率：1.52req/s] [内存消耗：2,760.02kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.033002s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.032002s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2018-12-15T17:58:09+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：0.719041s][吞吐率：1.39req/s] [内存消耗：2,760.02kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.069004s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.039002s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2018-12-15T18:02:10+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：210.201023s][吞吐率：0.00req/s] [内存消耗：2,756.74kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.033002s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.036002s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `user_address`  SET `mobile`='13345678933'  WHERE  `id` = 3 [ RunTime:0.088005s ]
+
+---------------------------------------------------------------
+[ 2018-12-15T18:12:58+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：128.216333s][吞吐率：0.01req/s] [内存消耗：2,760.35kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.036002s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.039002s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `user_address` (`name` , `mobile` , `province` , `city` , `country` , `detail` , `user_id`) VALUES ('qiyue' , '13345678977' , '艾泽拉斯' , '暴风城' , '闪金镇' , '狮王之傲旅店' , 1) [ RunTime:0.348020s ]
+
+---------------------------------------------------------------
