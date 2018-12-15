@@ -7,6 +7,7 @@ use think\Exception;
 use app\api\model\User as UserModel;
 use app\api\service\Token;
 use app\lib\exception\TokenException;
+use app\lib\enum\ScopeEnum;
 
 class UserToken extends Token
 {
@@ -106,7 +107,13 @@ class UserToken extends Token
     {
         $cachedValue = $wxResult;
         $cachedValue['uid'] = $uid;
-        $cachedValue['scope'] = 16;
+        // scope=16 代表App用户的权限数值
+        $cachedValue['scope'] = ScopeEnum::User;
+        //临时权限测试
+        //$cachedValue['scope'] = 15;
+
+        // scope=32 代表CMS (管理员) 用户的权限数值
+        //$cachedValue['scope'] = 32;
 
         return $cachedValue;
 
