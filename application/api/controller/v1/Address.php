@@ -11,36 +11,14 @@ use think\Controller;
 use app\lib\enum\ScopeEnum;
 use app\lib\exception\ForbiddenException;
 use app\lib\exception\TokenException;
+use app\api\controller\BaseController;
 
 
-class Address extends Controller
+class Address extends BaseController
 {
     protected $beforeActionList = [
         'checkPrimaryScope' => ['only'=>'createOrUpdateAddress']
-    ];
-
-    protected function checkPrimaryScope()
-    {
-        $scope = TokenService::getCurrentTokenVar('scope');
-
-        if($scope)
-        {
-            if($scope >= ScopeEnum::User)
-            {
-                return true;
-            }
-            else 
-            {
-                throw new ForbiddenException();
-            }
-        }
-        else 
-        {
-            throw new TokenException();
-        }
-
-        
-    }
+    ];   
 
     public function createOrUpdateAddress()
     {

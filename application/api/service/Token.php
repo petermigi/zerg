@@ -6,6 +6,8 @@ use think\Request;
 use think\Cache;
 use app\lib\exception\TokenException;
 use think\Exception;
+use app\lib\exception\ForbiddenException;
+use app\lib\enum\ScopeEnum;
 
 
 class Token
@@ -58,4 +60,64 @@ class Token
         $uid = self::getCurrentTokenVar('uid');
         return $uid;
     }
+
+    /**
+        *
+        *
+        * 功能说明:需要用户和CMS管理员都可以访问的权限(基础权限)判断
+        * 参数说明:
+        * @param  [type] $arg [description]
+        * @return [type]      [description]
+     */
+    public static function needPrimaryScope()
+    {
+        $scope = self::getCurrentTokenVar('scope');
+
+        if($scope)
+        {
+            if($scope >= ScopeEnum::User)
+            {
+                return true;
+            }
+            else 
+            {
+                throw new ForbiddenException();
+            }
+        }
+        else 
+        {
+            throw new TokenException();
+        }
+
+    }
+
+    /**
+        *
+        *
+        * 功能说明:只有用户才能访问的接口权限判断
+        * 参数说明:
+        * @param  [type] $arg [description]
+        * @return [type]      [description]
+     */
+    public static function needExclusiveScope()
+    {
+        $scope = TokenService::getCurrentTokenVar('scope');
+
+        if($scope)
+        {
+            if($scope == ScopeEnum::User)
+            {
+                return true;
+            }
+            else 
+            {
+                throw new ForbiddenException();
+            }
+        }
+        else 
+        {
+            throw new TokenException();
+        }        
+    }
+
 }

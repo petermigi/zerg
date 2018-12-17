@@ -42,5 +42,8 @@ Route::get('api/:version/category/all','api/:version.Category/getAllCategories')
 //获取令牌token接口访问url路由
 Route::post('api/:version/token/user','api/:version.Token/getToken');
 
-//获取用户收货地址信息接口访问url路由
+//用户收货地址添加修改接口访问url路由
 Route::post('api/:version/address','api/:version.Address/createOrUpdateAddress');
+
+//订单接口访问url路由
+Route::post('api/:version/order','api/:version.Order/placeOrder');
