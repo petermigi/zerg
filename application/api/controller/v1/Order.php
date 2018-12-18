@@ -8,6 +8,7 @@ use app\lib\exception\TokenException;
 use app\lib\exception\ForbiddenException;
 use app\lib\enum\ScopeEnum;
 use app\api\controller\BaseController;
+use app\api\validate\OrderPlace;
 
 class Order extends BaseController
 {
@@ -17,6 +18,6 @@ class Order extends BaseController
 
     public function placeOrder()
     {
-        
+        (new OrderPlace())->goCheck();
     }
 }
