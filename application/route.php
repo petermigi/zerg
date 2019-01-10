@@ -41,6 +41,8 @@ Route::get('api/:version/category/all','api/:version.Category/getAllCategories')
 
 //获取令牌token接口访问url路由
 Route::post('api/:version/token/user','api/:version.Token/getToken');
+//令牌token有效性验证接口访问url路由
+Route::post('api/:version/token/verify','api/:version.Token/verifyToken');
 
 //用户收货地址添加修改接口访问url路由
 Route::post('api/:version/address','api/:version.Address/createOrUpdateAddress');
