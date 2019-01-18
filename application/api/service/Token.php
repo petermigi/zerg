@@ -10,6 +10,7 @@ use app\lib\exception\ForbiddenException;
 use app\lib\enum\ScopeEnum;
 
 
+
 class Token
 {
     public static function generateToken()
@@ -101,7 +102,7 @@ class Token
      */
     public static function needExclusiveScope()
     {
-        $scope = TokenService::getCurrentTokenVar('scope');
+        $scope = self::getCurrentTokenVar('scope');
 
         if($scope)
         {
