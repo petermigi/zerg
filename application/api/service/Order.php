@@ -7,6 +7,7 @@ use app\lib\exception\UserException;
 use app\api\model\UserAddress;
 use app\api\model\OrderProduct;
 use app\api\model\Product;
+use think\Db;
 
 
 class Order
@@ -41,7 +42,8 @@ class Order
     }
 
     private function createOrder($snap)
-    {
+    {   
+        Db::startTrans();
         try
         {
             $orderNo = $this->makeOrderNo();
@@ -57,7 +59,7 @@ class Order
             $order->snap_address = $snap['snapAddress'];
             $order->snap_items = json_encode($snap['pStatus'],JSON_UNESCAPED_UNICODE);
 
-            $order->save();
+            $order->save();            
 
             $orderID = $order->id;
             $create_time = $order->create_time;
@@ -70,6 +72,8 @@ class Order
             $orderProduct = new OrderProduct();
             $orderProduct->saveAll($this->oProducts);
 
+            Db::commit();
+
             return [
                 'order_no' => $orderNo,
                 'order_id' => $orderID,
@@ -78,6 +82,7 @@ class Order
 
         }
         catch (Exception $ex){
+            Db::rollback();
             throw $ex;
         }    
     }

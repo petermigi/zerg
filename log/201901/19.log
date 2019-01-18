@@ -138,3 +138,38 @@
 [ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (2 , 6 , 10) [ RunTime:0.001000s ]
 
 ---------------------------------------------------------------
+[ 2019-01-19T05:42:06+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ log ] lh.zerg.com/api/v1/token/user [运行时间：1.984113s][吞吐率：0.50req/s] [内存消耗：2,665.02kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.067003s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.095006s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'oI3Tr4pUg48OXfrvDp3x-VmZEGz0' LIMIT 1 [ RunTime:0.017001s ]
+
+---------------------------------------------------------------
+[ 2019-01-19T05:45:08+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/order
+[ log ] lh.zerg.com/api/v1/order [运行时间：1.056061s][吞吐率：0.95req/s] [内存消耗：3,186.43kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (1,2) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`user_id` , `order_no` , `total_price` , `total_count` , `snap_img` , `snap_name` , `snap_address` , `snap_items` , `update_time` , `create_time`) VALUES (1 , 'C119479077770819' , 0.1 , 10 , 'http://lh.zerg.com/images/product-vg@1.png' , '芹菜 半斤等' , '{\"name\":\"张三\",\"mobile\":\"18798118175\",\"province\":\"广东省\",\"city\":\"广州市\",\"country\":\"海珠区\",\"detail\":\"新港中路397号\",\"update_time\":\"1970-01-01 08:00:00\"}' , '[{\"id\":1,\"haveStock\":true,\"count\":4,\"name\":\"芹菜 半斤\",\"totalPrice\":0.04},{\"id\":2,\"haveStock\":true,\"count\":6,\"name\":\"梨花带雨 3个\",\"totalPrice\":0.06},{\"id\":1,\"name\":\"芹菜 半斤\",\"main_img_url\":\"http:\\/\\/lh.zerg.com\\/images\\/product-vg@1.png\",\"count\":4,\"totalPrice\":0.04,\"price\":\"0.01\",\"counts\":4},{\"id\":2,\"name\":\"梨花带雨 3个\",\"main_img_url\":\"http:\\/\\/lh.zerg.com\\/images\\/product-dryfruit@1.png\",\"count\":6,\"totalPrice\":0.06,\"price\":\"0.01\",\"counts\":6}]' , 1547847907 , 1547847907) [ RunTime:0.138008s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.061004s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (1 , 4 , 11) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (2 , 6 , 11) [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2019-01-19T05:45:23+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/order
+[ log ] lh.zerg.com/api/v1/order [运行时间：0.816046s][吞吐率：1.23req/s] [内存消耗：3,186.43kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (1,2) [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.022001s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`user_id` , `order_no` , `total_price` , `total_count` , `snap_img` , `snap_name` , `snap_address` , `snap_items` , `update_time` , `create_time`) VALUES (1 , 'C119479225809388' , 0.1 , 10 , 'http://lh.zerg.com/images/product-vg@1.png' , '芹菜 半斤等' , '{\"name\":\"张三\",\"mobile\":\"18798118175\",\"province\":\"广东省\",\"city\":\"广州市\",\"country\":\"海珠区\",\"detail\":\"新港中路397号\",\"update_time\":\"1970-01-01 08:00:00\"}' , '[{\"id\":1,\"haveStock\":true,\"count\":4,\"name\":\"芹菜 半斤\",\"totalPrice\":0.04},{\"id\":2,\"haveStock\":true,\"count\":6,\"name\":\"梨花带雨 3个\",\"totalPrice\":0.06},{\"id\":1,\"name\":\"芹菜 半斤\",\"main_img_url\":\"http:\\/\\/lh.zerg.com\\/images\\/product-vg@1.png\",\"count\":4,\"totalPrice\":0.04,\"price\":\"0.01\",\"counts\":4},{\"id\":2,\"name\":\"梨花带雨 3个\",\"main_img_url\":\"http:\\/\\/lh.zerg.com\\/images\\/product-dryfruit@1.png\",\"count\":6,\"totalPrice\":0.06,\"price\":\"0.01\",\"counts\":6}]' , 1547847921 , 1547847921) [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (1 , 4 , 12) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (2 , 6 , 12) [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
