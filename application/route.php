@@ -49,3 +49,14 @@ Route::post('api/:version/address','api/:version.Address/createOrUpdateAddress')
 
 //订单接口访问url路由
 Route::post('api/:version/order','api/:version.Order/placeOrder');
+//历史订单接口访问url路由
+Route::get('api/:version/order/by_user','api/:version.Order/getSummaryByUser');
+//订单详情接口访问url路由
+Route::get('api/:version/order/:id','api/:version.Order/getDetail',[],['id'=>'\d+']);
+
+//支付接口访问路由
+Route::post('api/:version/pay/pre_order','api/:version.Pay/getOrder');
+//微信支付回调接口访问路由
+Route::post('api/:version/pay/notify','api/:version.Pay/receiveNotify');
+//微信支付回调转发接口访问路由
+Route::post('api/:version/pay/re_notify','api/:version.Pay/redirectNotify');
