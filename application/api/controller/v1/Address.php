@@ -12,13 +12,32 @@ use app\lib\enum\ScopeEnum;
 use app\lib\exception\ForbiddenException;
 use app\lib\exception\TokenException;
 use app\api\controller\BaseController;
+use app\api\model\UserAddress;
 
 
 class Address extends BaseController
 {
     protected $beforeActionList = [
-        'checkPrimaryScope' => ['only'=>'createOrUpdateAddress']
+        'checkPrimaryScope' => ['only'=>'createOrUpdateAddress,getUserAddress']
     ];   
+
+    /**
+     * 获取用户地址信息
+     * @return UserAddress
+     * @throws UserException
+     */
+    public function getUserAddress(){
+        $uid = TokenService::getCurrentUid();
+        $userAddress = UserAddress::where('user_id', $uid)
+            ->find();
+        if(!$userAddress){
+            throw new UserException([
+               'msg' => '用户地址不存在',
+                'errorCode' => 60001
+            ]);
+        }
+        return $userAddress;
+    }
 
     public function createOrUpdateAddress()
     {

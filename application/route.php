@@ -46,6 +46,8 @@ Route::post('api/:version/token/verify','api/:version.Token/verifyToken');
 
 //用户收货地址添加修改接口访问url路由
 Route::post('api/:version/address','api/:version.Address/createOrUpdateAddress');
+//获取用户收货地址接口访问url路由
+Route::get('api/:version/address','api/:version.Address/getUserAddress');
 
 //订单接口访问url路由
 Route::post('api/:version/order','api/:version.Order/placeOrder');
