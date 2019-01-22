@@ -152,3 +152,79 @@ SELECT * FROM `image` WHERE  `id` IN (16,17,18) [ RunTime:0.014001s ]
 [ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.002000s ]
 
 ---------------------------------------------------------------
+[ 2019-01-22T21:24:06+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/verify
+[ log ] lh.zerg.com/api/v1/token/verify [运行时间：0.986056s][吞吐率：1.01req/s] [内存消耗：1,266.13kb] [文件加载：34]
+
+---------------------------------------------------------------
+[ 2019-01-22T21:24:08+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/banner/1
+[ log ] lh.zerg.com/api/v1/banner/1 [运行时间：1.444083s][吞吐率：0.69req/s] [内存消耗：2,798.23kb] [文件加载：51]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.385022s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.155008s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (65,2,3,1) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2019-01-22T21:24:08+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/recent
+[ log ] lh.zerg.com/api/v1/product/recent [运行时间：1.333076s][吞吐率：0.75req/s] [内存消耗：2,631.74kb] [文件加载：45]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.397022s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.167009s ]
+[ sql ] [ SQL ] SELECT * FROM `product` ORDER BY create_time desc LIMIT 15 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+SELECT * FROM `image` WHERE  `id` IN (16,17,18) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49,50,18) [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2019-01-22T21:24:19+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/address
+[ log ] lh.zerg.com/api/v1/address [运行时间：1.024059s][吞吐率：0.98req/s] [内存消耗：2,775.62kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.066004s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.002001s ]
+
+---------------------------------------------------------------
+[ 2019-01-22T21:24:24+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/order
+[ log ] lh.zerg.com/api/v1/order [运行时间：1.630093s][吞吐率：0.61req/s] [内存消耗：3,216.97kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (11,2) [ RunTime:0.060004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.121007s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`user_id` , `order_no` , `total_price` , `total_count` , `snap_img` , `snap_name` , `snap_address` , `snap_items` , `update_time` , `create_time`) VALUES (1 , 'C122634634279323' , 0.05 , 5 , 'http://lh.zerg.com/images/product-dryfruit@1.png' , '梨花带雨 3个等' , '{\"name\":\"张三\",\"mobile\":\"18798118175\",\"province\":\"广东省\",\"city\":\"广州市\",\"country\":\"海珠区\",\"detail\":\"新港中路397号\",\"update_time\":\"1970-01-01 08:00:00\"}' , '[{\"id\":11,\"haveStock\":true,\"count\":3,\"name\":\"贵妃笑 100克\",\"totalPrice\":0.03},{\"id\":2,\"haveStock\":true,\"count\":2,\"name\":\"梨花带雨 3个\",\"totalPrice\":0.02},{\"id\":2,\"name\":\"梨花带雨 3个\",\"main_img_url\":\"http:\\/\\/lh.zerg.com\\/images\\/product-dryfruit@1.png\",\"count\":3,\"totalPrice\":0.03,\"price\":\"0.01\",\"counts\":3},{\"id\":11,\"name\":\"贵妃笑 100克\",\"main_img_url\":\"http:\\/\\/lh.zerg.com\\/images\\/product-dryfruit-a@6.png\",\"count\":2,\"totalPrice\":0.02,\"price\":\"0.01\",\"counts\":2}]' , 1548163462 , 1548163462) [ RunTime:0.387022s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.097006s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (11 , 3 , 13) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (2 , 2 , 13) [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2019-01-22T21:24:59+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/order
+[ log ] lh.zerg.com/api/v1/order [运行时间：0.718041s][吞吐率：1.39req/s] [内存消耗：3,216.97kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (11,2) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`user_id` , `order_no` , `total_price` , `total_count` , `snap_img` , `snap_name` , `snap_address` , `snap_items` , `update_time` , `create_time`) VALUES (1 , 'C122634988079642' , 0.05 , 5 , 'http://lh.zerg.com/images/product-dryfruit@1.png' , '梨花带雨 3个等' , '{\"name\":\"张三\",\"mobile\":\"18798118175\",\"province\":\"广东省\",\"city\":\"广州市\",\"country\":\"海珠区\",\"detail\":\"新港中路397号\",\"update_time\":\"1970-01-01 08:00:00\"}' , '[{\"id\":11,\"haveStock\":true,\"count\":3,\"name\":\"贵妃笑 100克\",\"totalPrice\":0.03},{\"id\":2,\"haveStock\":true,\"count\":2,\"name\":\"梨花带雨 3个\",\"totalPrice\":0.02},{\"id\":2,\"name\":\"梨花带雨 3个\",\"main_img_url\":\"http:\\/\\/lh.zerg.com\\/images\\/product-dryfruit@1.png\",\"count\":3,\"totalPrice\":0.03,\"price\":\"0.01\",\"counts\":3},{\"id\":11,\"name\":\"贵妃笑 100克\",\"main_img_url\":\"http:\\/\\/lh.zerg.com\\/images\\/product-dryfruit-a@6.png\",\"count\":2,\"totalPrice\":0.02,\"price\":\"0.01\",\"counts\":2}]' , 1548163498 , 1548163498) [ RunTime:0.029002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (11 , 3 , 14) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (2 , 2 , 14) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2019-01-22T21:27:54+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/order
+[ log ] lh.zerg.com/api/v1/order [运行时间：0.768044s][吞吐率：1.30req/s] [内存消耗：3,216.97kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035002s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.024001s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (11,2) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`user_id` , `order_no` , `total_price` , `total_count` , `snap_img` , `snap_name` , `snap_address` , `snap_items` , `update_time` , `create_time`) VALUES (1 , 'C122636739199743' , 0.05 , 5 , 'http://lh.zerg.com/images/product-dryfruit@1.png' , '梨花带雨 3个等' , '{\"name\":\"张三\",\"mobile\":\"18798118175\",\"province\":\"广东省\",\"city\":\"广州市\",\"country\":\"海珠区\",\"detail\":\"新港中路397号\",\"update_time\":\"1970-01-01 08:00:00\"}' , '[{\"id\":11,\"haveStock\":true,\"count\":3,\"name\":\"贵妃笑 100克\",\"totalPrice\":0.03},{\"id\":2,\"haveStock\":true,\"count\":2,\"name\":\"梨花带雨 3个\",\"totalPrice\":0.02},{\"id\":2,\"name\":\"梨花带雨 3个\",\"main_img_url\":\"http:\\/\\/lh.zerg.com\\/images\\/product-dryfruit@1.png\",\"count\":3,\"totalPrice\":0.03,\"price\":\"0.01\",\"counts\":3},{\"id\":11,\"name\":\"贵妃笑 100克\",\"main_img_url\":\"http:\\/\\/lh.zerg.com\\/images\\/product-dryfruit-a@6.png\",\"count\":2,\"totalPrice\":0.02,\"price\":\"0.01\",\"counts\":2}]' , 1548163673 , 1548163673) [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (11 , 3 , 15) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (2 , 2 , 15) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------

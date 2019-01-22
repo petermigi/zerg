@@ -57,7 +57,7 @@ Route::get('api/:version/order/by_user','api/:version.Order/getSummaryByUser');
 Route::get('api/:version/order/:id','api/:version.Order/getDetail',[],['id'=>'\d+']);
 
 //支付接口访问路由
-Route::post('api/:version/pay/pre_order','api/:version.Pay/getOrder');
+Route::post('api/:version/pay/pre_order','api/:version.Pay/getPreOrder');
 //微信支付回调接口访问路由
 Route::post('api/:version/pay/notify','api/:version.Pay/receiveNotify');
 //微信支付回调转发接口访问路由
