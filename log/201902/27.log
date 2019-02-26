@@ -1,0 +1,77 @@
+[ 2019-02-27T00:09:24+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/paginate?page=1&size=20
+[ log ] lh.zerg.com/api/v1/order/paginate?page=1&size=20 [运行时间：0.947054s][吞吐率：1.06req/s] [内存消耗：3,184.62kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY create_time desc LIMIT 0,21 [ RunTime:0.207012s ]
+
+---------------------------------------------------------------
+[ 2019-02-27T00:09:38+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/paginate?page=2&size=20
+[ log ] lh.zerg.com/api/v1/order/paginate?page=2&size=20 [运行时间：0.659037s][吞吐率：1.52req/s] [内存消耗：3,165.06kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY create_time desc LIMIT 20,21 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2019-02-27T00:10:53+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/app
+[ log ] lh.zerg.com/api/v1/token/app [运行时间：0.674038s][吞吐率：1.48req/s] [内存消耗：2,687.59kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `third_app` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `third_app` WHERE  `app_id` = 'starcraft'  AND `app_secret` = '777*777' LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2019-02-27T00:10:56+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/paginate?page=1&size=20
+[ log ] lh.zerg.com/api/v1/order/paginate?page=1&size=20 [运行时间：0.706040s][吞吐率：1.42req/s] [内存消耗：3,184.63kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY create_time desc LIMIT 0,21 [ RunTime:0.006000s ]
+
+---------------------------------------------------------------
+[ 2019-02-27T00:11:00+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/paginate?page=2&size=20
+[ log ] lh.zerg.com/api/v1/order/paginate?page=2&size=20 [运行时间：0.675039s][吞吐率：1.48req/s] [内存消耗：3,165.06kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.022001s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY create_time desc LIMIT 20,21 [ RunTime:0.004000s ]
+
+---------------------------------------------------------------
+[ 2019-02-27T00:13:22+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/app
+[ log ] lh.zerg.com/api/v1/token/app [运行时间：0.568033s][吞吐率：1.76req/s] [内存消耗：2,686.36kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `third_app` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `third_app` WHERE  `app_id` = 'starcraft'  AND `app_secret` = '777*777' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2019-02-27T00:13:24+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/paginate?page=1&size=20
+[ log ] lh.zerg.com/api/v1/order/paginate?page=1&size=20 [运行时间：0.666038s][吞吐率：1.50req/s] [内存消耗：3,184.63kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY create_time desc LIMIT 0,21 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2019-02-27T00:13:29+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/paginate?page=2&size=20
+[ log ] lh.zerg.com/api/v1/order/paginate?page=2&size=20 [运行时间：0.692039s][吞吐率：1.45req/s] [内存消耗：3,165.06kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY create_time desc LIMIT 20,21 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2019-02-27T00:21:48+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/app
+[ log ] lh.zerg.com/api/v1/token/app [运行时间：0.671038s][吞吐率：1.49req/s] [内存消耗：2,686.36kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `third_app` [ RunTime:0.024001s ]
+[ sql ] [ SQL ] SELECT * FROM `third_app` WHERE  `app_id` = 'starcraft'  AND `app_secret` = '777*777' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2019-02-27T00:21:51+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/paginate?page=1&size=20
+[ log ] lh.zerg.com/api/v1/order/paginate?page=1&size=20 [运行时间：0.719041s][吞吐率：1.39req/s] [内存消耗：3,184.63kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.025002s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY create_time desc LIMIT 0,21 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2019-02-27T00:21:53+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/order/paginate?page=2&size=20
+[ log ] lh.zerg.com/api/v1/order/paginate?page=2&size=20 [运行时间：0.800046s][吞吐率：1.25req/s] [内存消耗：3,165.06kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026001s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.030002s ]
+[ sql ] [ SQL ] SELECT * FROM `order` ORDER BY create_time desc LIMIT 20,21 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------

@@ -859,3 +859,10 @@ T * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.003000s ]
 [ sql ] [ SQL ] SELECT * FROM `third_app` WHERE  `app_id` = 'starcraft'  AND `app_secret` = '777*777' LIMIT 1 [ RunTime:0.016001s ]
 
 ---------------------------------------------------------------
+[ 2019-02-26T23:22:39+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/app
+[ log ] lh.zerg.com/api/v1/token/app [运行时间：0.850049s][吞吐率：1.18req/s] [内存消耗：2,681.72kb] [文件加载：48]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=zerg;host=lh.zerg.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `third_app` [ RunTime:0.185010s ]
+[ sql ] [ SQL ] SELECT * FROM `third_app` WHERE  `app_id` = 'starcraft'  AND `app_secret` = '777*777' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------

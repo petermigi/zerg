@@ -11,6 +11,7 @@ use app\lib\exception\SuccessMessage;
 use app\lib\enum\ScopeEnum;
 use app\api\controller\BaseController;
 use app\api\validate\OrderPlace;
+use app\api\validate\PagingParameter;
 use app\api\service\Order as OrderService;
 use app\api\model\Order as OrderModel;
 
@@ -60,7 +61,7 @@ class Order extends BaseController
      * @return array
      * @throws \app\lib\exception\ParameterException
      */
-    public function getSummary($page=1, $size = 20){
+    public function getSummary($page=1, $size = 20){        
         (new PagingParameter())->goCheck();
 //        $uid = Token::getCurrentUid();
         $pagingOrders = OrderModel::getSummaryByPage($page, $size);
