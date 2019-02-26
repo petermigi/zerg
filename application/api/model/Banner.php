@@ -7,6 +7,8 @@ use app\api\model\BaseModel;
 
 class Banner extends BaseModel
 {
+    //生成数据库表字段缓存
+    // php think optimize:schema
     //黑名单隐藏字段(属性$hidden)
     protected $hidden = ['delete_time','update_time'];
 

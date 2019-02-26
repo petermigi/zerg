@@ -18,6 +18,9 @@ class Banner
     **/
     public function getBanner($id)
     {
+        //生成路由缓存
+        //php think optimize:route
+
         (new IDMustBePositiveInt())->goCheck();
         
         $banner = BannerModel::getBannerByID($id);  
