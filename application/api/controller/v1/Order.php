@@ -53,6 +53,32 @@ class Order extends BaseController
     }
 
     /**
+     * 获取全部订单简要信息（分页）
+     * @param int $page
+     * @param int $size
+     * @return array
+     * @throws \app\lib\exception\ParameterException
+     */
+    public function getSummary($page=1, $size = 20){
+        (new PagingParameter())->goCheck();
+//        $uid = Token::getCurrentUid();
+        $pagingOrders = OrderModel::getSummaryByPage($page, $size);
+        if ($pagingOrders->isEmpty())
+        {
+            return [
+                'current_page' => $pagingOrders->currentPage(),
+                'data' => []
+            ];
+        }
+        $data = $pagingOrders->hidden(['snap_items', 'snap_address'])
+            ->toArray();
+        return [
+            'current_page' => $pagingOrders->currentPage(),
+            'data' => $data
+        ];
+    }
+
+    /**
      * 获取订单详情
      * @param $id
      * @return static

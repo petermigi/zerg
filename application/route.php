@@ -62,6 +62,9 @@ Route::post('api/:version/order','api/:version.Order/placeOrder');
 Route::get('api/:version/order/by_user','api/:version.Order/getSummaryByUser');
 //订单详情接口访问url路由
 Route::get('api/:version/order/:id','api/:version.Order/getDetail',[],['id'=>'\d+']);
+//不想把所有查询都写在一起，所以增加by_user，很好的REST与RESTFul的区别
+Route::get('api/:version/order/by_user', 'api/:version.Order/getSummaryByUser');
+Route::get('api/:version/order/paginate', 'api/:version.Order/getSummary');
 
 //Pay
 //支付接口访问路由
