@@ -7,6 +7,7 @@ use app\api\service\Token as TokenService;
 use app\lib\exception\TokenException;
 use app\lib\exception\ForbiddenException;
 use app\lib\exception\OrderException;
+use app\lib\exception\SuccessMessage;
 use app\lib\enum\ScopeEnum;
 use app\api\controller\BaseController;
 use app\api\validate\OrderPlace;
@@ -109,5 +110,14 @@ class Order extends BaseController
 
         return $status;
         
+    }
+
+    public function delivery($id){
+        (new IDMustBePositiveInt())->goCheck();
+        $order = new OrderService();
+        $success = $order->delivery($id);
+        if($success){
+            return new SuccessMessage();
+        }
     }
 }

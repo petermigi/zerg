@@ -65,6 +65,7 @@ Route::get('api/:version/order/:id','api/:version.Order/getDetail',[],['id'=>'\d
 //不想把所有查询都写在一起，所以增加by_user，很好的REST与RESTFul的区别
 Route::get('api/:version/order/by_user', 'api/:version.Order/getSummaryByUser');
 Route::get('api/:version/order/paginate', 'api/:version.Order/getSummary');
+Route::put('api/:version/order/delivery', 'api/:version.Order/delivery');
 
 //Pay
 //支付接口访问路由
@@ -73,3 +74,6 @@ Route::post('api/:version/pay/pre_order','api/:version.Pay/getPreOrder');
 Route::post('api/:version/pay/notify','api/:version.Pay/receiveNotify');
 //微信支付回调转发接口访问路由
 Route::post('api/:version/pay/re_notify','api/:version.Pay/redirectNotify');
+
+//Message
+Route::post('api/:version/message/delivery', 'api/:version.Message/sendDeliveryMsg');
