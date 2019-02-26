@@ -214,7 +214,7 @@ class Order
             }
 
             $status['orderPrice'] += $pStatus['totalPrice'];
-            $status['totalCount'] += $pStatus['count'];
+            $status['totalCount'] += $pStatus['counts'];
             array_push($status['pStatusArray'], $pStatus);
         }
         return $status;
@@ -228,9 +228,11 @@ class Order
         $pStatus = [
             'id' => null,
             'haveStock' => false,
-            'count' => 0,
+            'counts' => 0,
+            'price' => 0,
             'name' => '',
-            'totalPrice' => 0
+            'totalPrice' => 0,
+            'main_img_url' => null
         ];
 
         for($i=0; $i<count($products); $i++) 
@@ -257,7 +259,9 @@ class Order
             //获得单个真实商品的是否有库存的状态
             $pStatus['id'] = $product['id'];   
             $pStatus['name'] = $product['name'];   
-            $pStatus['count'] = $oCount;   
+            $pStatus['counts'] = $oCount;   
+            $pStatus['price'] = $product['price'];   
+            $pStatus['main_img_url'] = $product['main_img_url'];   
             $pStatus['totalPrice'] = $product['price'] * $oCount;
                                     
             if($product['stock'] - $oCount >= 0)
