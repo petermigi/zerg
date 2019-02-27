@@ -16,8 +16,7 @@ class Banner
         * @id  banner的id号
         *         
     **/
-    public function getBanner($id)
-    {
+    public function getBanner($id)    {
         //生成路由缓存
         //php think optimize:route
 
